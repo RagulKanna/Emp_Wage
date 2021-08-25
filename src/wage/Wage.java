@@ -1,9 +1,11 @@
 package wage;
 
 public class Wage {
+    public static int payforhour =20;
     public static void main(String[] args) {
       //  Emppresentorabsent();
-        FullTimeEmpsalary();
+     //   FullTimeEmpsalary();
+        PartTimeEmployee();
     }
 
 
@@ -17,7 +19,7 @@ public class Wage {
         else
             System.out.println("So The Employee is Absent Today");
     }*/
-   public static void FullTimeEmpsalary()
+  /* public static void FullTimeEmpsalary()
    {
 
 
@@ -34,6 +36,30 @@ public class Wage {
 
        } else
            System.out.println("No salary if they Absent");
+
+
+   }*/
+   public static void PartTimeEmployee()
+   {
+
+
+       int PartEmployee = 4;
+       int pemployee = (int) (Math.floor(Math.random() * 10) % 2);
+
+
+       if (pemployee == 1) {
+           System.out.println("Employee is Present");
+       } else
+           System.out.println("Employee is Absent");
+       int Psalary = payforhour * PartEmployee;
+
+
+       if (pemployee == 1) {
+           System.out.println("Employee's one day Salary is " + Psalary);
+
+
+       } else
+           System.out.println("No salary due to Absent");
 
 
    }
