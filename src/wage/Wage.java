@@ -14,10 +14,12 @@ public class Wage {
 
         switch (emp) {
             case 1:
-                FullTimeEmpsalary();
+                //FullTimeEmpsalary();
+                fmonthlywage();
                 break;
             case 2:
-                PartTimeEmployee();
+                //PartTimeEmployee();
+                pmonthlywage();
                 break;
             default:
                 System.out.println("You searching wrong employee");
@@ -37,7 +39,7 @@ public class Wage {
         else
             System.out.println("So The Employee is Absent Today");
     }*/
-  public static void FullTimeEmpsalary()
+  /*public static void FullTimeEmpsalary()
    {
 
 
@@ -77,7 +79,25 @@ public class Wage {
 
 
        } else
-           System.out.println("No salary due to Absent");
+           System.out.println("No salary due to Absent");*/
+
+       public static void fmonthlywage()
+       {
+           int time= (int) (Math.floor(Math.random() * 100 ));
+           int fsal= time*payforhour;
+           System.out.println("Employee Worked Time for this month: " + time + " hours");
+           System.out.println("Employee's this month salary is " + fsal );
+
+       }
+
+       public static void pmonthlywage()
+       {
+           int time= (int) (Math.floor(Math.random() * 50 ));
+           int psal = time*payforhour;
+           System.out.println("Employee Worked Time for this month: " + time + " hours");
+           System.out.println("Employee's this month salary is " + psal );
+
+       }
 
 
    }
