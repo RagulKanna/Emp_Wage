@@ -1,16 +1,34 @@
 package wage;
 
+import java.util.Scanner;
+
 public class Wage {
     public static int payforhour =20;
     public static void main(String[] args) {
-      //  Emppresentorabsent();
-     //   FullTimeEmpsalary();
-        PartTimeEmployee();
+       //Emppresentorabsent();
+        Scanner s = new Scanner(System.in);
+        System.out.println("Enter the type of employee details you need as mentioned number: " +
+                "\n 1.FullTime employee " +
+                "\n 2.PartTime employee");
+        System.out.println("Enter the number: ");int emp = s.nextInt();
+
+        switch (emp) {
+            case 1:
+                FullTimeEmpsalary();
+                break;
+            case 2:
+                PartTimeEmployee();
+                break;
+            default:
+                System.out.println("You searching wrong employee");
+
+        }
+
     }
 
 
 
-   /* public static void Emppresentorabsent(){
+   /*public static void Emppresentorabsent(){
         int IsPresent = 1;
         int EmpCheck = (int) Math.floor(Math.random() * 10 % 2);
         System.out.println("The value of Attendance: " + EmpCheck);
@@ -19,7 +37,7 @@ public class Wage {
         else
             System.out.println("So The Employee is Absent Today");
     }*/
-  /* public static void FullTimeEmpsalary()
+  public static void FullTimeEmpsalary()
    {
 
 
@@ -38,7 +56,7 @@ public class Wage {
            System.out.println("No salary if they Absent");
 
 
-   }*/
+   }
    public static void PartTimeEmployee()
    {
 
